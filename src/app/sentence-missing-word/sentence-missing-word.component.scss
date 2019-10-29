@@ -1,0 +1,20 @@
+::ng-deep input {
+    font-size: 12px;
+    // --background: gray;
+    // display: inline;
+    // --padding-bottom: 0;
+    // --padding-start: 0;
+    // --padding-end: 0;
+    // --padding-top: 0;
+    // --placeholder-font-weight: 100px;
+}
+ion-label {
+    // --placeholder-font-weight: 100px;
+}
+
+:host {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
