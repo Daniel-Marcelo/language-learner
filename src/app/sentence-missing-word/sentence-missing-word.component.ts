@@ -9,6 +9,8 @@ export class SentenceMissingWordComponent implements OnInit {
 
   private sentence = new Array<string>();
   private missingWord = '';
+  private answerIsCorrect = false;
+  private isTabClicked = false;
 
   constructor() { }
 
@@ -21,4 +23,9 @@ export class SentenceMissingWordComponent implements OnInit {
     return word.toUpperCase() === this.missingWord.toUpperCase();
   }
 
+  onKey(event: any) {
+    console.log(event);
+    this.isTabClicked = true;
+    this.answerIsCorrect = this.isMissingWord(event.srcElement.value);
+  }
 }

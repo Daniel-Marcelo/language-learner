@@ -32,6 +32,8 @@
               }
             ],
             "styles": [
+              "./node_modules/font-awesome/css/font-awesome.min.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css",  
               {
                 "input": "src/theme/variables.scss"
               },
@@ -76,6 +78,11 @@
           "options": {
             "browserTarget": "app:build"
           },
+          "styles": [  
+            "./node_modules/font-awesome/css/font-awesome.min.css",
+            "../node_modules/bootstrap/dist/css/bootstrap.css"
+     
+               ],  
           "configurations": {
             "production": {
               "browserTarget": "app:build:production"
@@ -98,8 +105,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "styles": [],
-            "scripts": [],
+            "styles": [  
+         "./node_modules/font-awesome/css/font-awesome.min.css",
+         "../node_modules/bootstrap/dist/css/bootstrap.css"
+  
+            ],  
+            "scripts": [              
+            ],
             "assets": [
               {
                 "glob": "favicon.ico",

@@ -3,8 +3,13 @@
     <span style="display: inline-block; margin-left: 10px" *ngIf="!isMissingWord(word)">{{word}}</span>
     <div style="display: inline-block;">
       <ion-item style="display: inline-block; margin-left: 10px;" *ngIf="isMissingWord(word)">
-        <ion-input size="10" type="text" style="height: 10%" placeholder="..."></ion-input>
+        <ion-input size="10" type="text" style="height: 10%" placeholder="..." (keydown.Tab)="onKey($event)">
+        </ion-input>
       </ion-item>
     </div>
   </ng-container>
+  <span *ngIf="isTabClicked">
+    <i *ngIf="answerIsCorrect" style="margin-left:10px; color: green; font-size: 20px;" class="fa fa-check"></i>
+    <i *ngIf="!answerIsCorrect" style="margin-left:10px; color: red; font-size: 20px;" class="fa fa-close"></i>
+  </span>
 </div>
