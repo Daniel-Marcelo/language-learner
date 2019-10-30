@@ -9,14 +9,14 @@ export class SentenceMissingWordComponent implements OnInit {
 
   private sentence = new Array<string>();
   private missingWord = '';
-  private answerIsCorrect = false;
-  private isTabClicked = false;
+  answerIsCorrect = false;
+  isTabClicked = false;
 
   constructor() { }
 
   ngOnInit() {
-    this.sentence = ['My', 'Name', 'is', 'Daniel'];
-    this.missingWord = 'name';
+    this.sentence = ['Meu', 'nome', 'é', 'Daniel'];
+    this.missingWord = 'nome';
   }
 
   private isMissingWord(word): boolean {
